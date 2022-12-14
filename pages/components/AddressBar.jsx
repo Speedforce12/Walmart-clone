@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { IoLocationOutline } from "react-icons/io5";
 import { GrHomeRounded } from "react-icons/gr";
+import Options from "./Options";
 
 const AddressBar = () => {
   return (
-    <div className='flex px-14 border-t py-2 bg-blue-500'>
+    <div className='flex px-14 border-t py-2 bg-blue-500 items-center justify-between'>
       <div className='relative h-6 w-6 text-white flex cursor-pointer items-center'>
         <Image
           src='https://i5.walmartimages.com/dfw/4ff9c6c9-ad46/k2-_0a671c38-d307-447c-835e-7904ab143c26.v1.png'
@@ -27,6 +28,16 @@ const AddressBar = () => {
           />
           <p className='whitespace-nowrap'>Doral Supercenter</p>
         </div>
+      </div>
+
+      <div className='xl:flex space-x-5 hidden text-white'>
+        <Options option='Grocery & essentials' />
+        <Options option='Tech under $100' />
+        <Options option='Apparel' />
+        <Options option='Up to 50% off toys!' />
+        <Options option='Christmas sweater' />
+        <Options option='Deals' />
+        <Options option='Walmart+' />
       </div>
     </div>
   );
